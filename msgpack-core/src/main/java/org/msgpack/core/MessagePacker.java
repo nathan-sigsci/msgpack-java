@@ -1184,7 +1184,7 @@ public class MessagePacker
     }
 
     /**
-     * The method copies the lower 8-bits of the characters.
+     * This method copies the lower 8-bits of the characters.
      * A separate writePayload(String src) method would be more performant because we're able to
      * directly copy the bytes from the string to the right location in MessageBuffer.  Introducing
      * encoding in an attempt to re-use the existing writePayload(byte[] src) creates unnecessary overhead
@@ -1192,7 +1192,7 @@ public class MessagePacker
      *
      * @param src the string data to add
      * @return this
-     * @throws Exception
+     * @throws IOException
      */
 
     public MessagePacker writePayload(String src) throws IOException
